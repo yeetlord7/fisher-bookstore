@@ -49,7 +49,11 @@ namespace Fisher.Bookstore.Api.Controllers
             return Ok(db.Books);
         }
 
+<<<<<<< HEAD
         [HttpGet("{id}", Name = "GetBook")]
+=======
+        [HttpGet("{id}")]
+>>>>>>> 14a5c50e9e5231972029302894e0af0211ecb85d
         public IActionResult GetBook(int id)
         {
             var book = db.Books.FirstOrDefault(b => b.Id == id);
@@ -61,6 +65,7 @@ namespace Fisher.Bookstore.Api.Controllers
 
             return Ok(book);
         }
+<<<<<<< HEAD
 
         [HttpPost]
          public IActionResult Post([FromBody]Book book)
@@ -116,5 +121,7 @@ namespace Fisher.Bookstore.Api.Controllers
 
              return NoContent();
          }
+=======
+>>>>>>> 14a5c50e9e5231972029302894e0af0211ecb85d
     }
 }
