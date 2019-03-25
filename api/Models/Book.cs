@@ -1,5 +1,4 @@
 using System;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Fisher.Bookstore.Models
 {
@@ -13,7 +12,9 @@ namespace Fisher.Bookstore.Models
 
         public string ISBN { get; set; }
 
-        public DateTime publicationDate { get; set; }
+        public DateTime PublishDate{ get; set; }
+
+        public DateTime Publisher{ get; set; }
 
     }
 }

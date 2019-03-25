@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-namespace Fisher.Bookstore.Models
+using Fisher.Bookstore.Models;
+
+namespace  Fisher.Bookstore.Data
 {
     public class BookstoreContext : DbContext
     {
@@ -9,6 +10,9 @@ namespace Fisher.Bookstore.Models
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder builder) => base.OnModelCreating(builder);
+
         public DbSet<Book> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
     }
 }
